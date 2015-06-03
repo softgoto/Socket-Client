@@ -41,11 +41,7 @@ read到数据后别忘了还需要加上下面代码
     //发送消息
     [asyncSocket writeData:[writeStr dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:0];
 ```
-* 数据write完后会调用`socket:didWriteDataWithTag:`函数(`GCDAsyncSocketDelegate`定义的协议)，没错还需要加持续接收服务端返回数据代码
-```
-    //持续接收服务端返回的数据
-    [asyncSocket readDataWithTimeout:-1 tag:0];
-```
+* 数据write完后会调用`socket:didWriteDataWithTag:`函数(`GCDAsyncSocketDelegate`定义的协议)
 * 到此整个流程就结束了，另外如果连接服务器时失败了会调用`socketDidDisconnect:withError`函数，客户端手动断开连接`[asyncSocket disconnect];`
 
 在我查找资料的过程中，有一篇博客对我启发很大，有兴趣的朋友可以看看[《GCDAsyncSocket类库，IOS下TCP通讯使用心得》](http://cvito.net/index.php/archives/1081)
