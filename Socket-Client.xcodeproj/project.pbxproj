@@ -14,6 +14,8 @@
 		0364C7201B1C609600760C67 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0364C71F1B1C609600760C67 /* Images.xcassets */; };
 		0364C7231B1C609600760C67 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0364C7211B1C609600760C67 /* LaunchScreen.xib */; };
 		0364C72F1B1C609600760C67 /* Socket_ClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0364C72E1B1C609600760C67 /* Socket_ClientTests.m */; };
+		0364C73B1B1C60C600760C67 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0364C73A1B1C60C600760C67 /* GCDAsyncSocket.m */; };
+		0364C73E1B1D57BB00760C67 /* BonjourUtilClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 0364C73D1B1D57BB00760C67 /* BonjourUtilClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		0364C7281B1C609600760C67 /* Socket-ClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Socket-ClientTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0364C72D1B1C609600760C67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0364C72E1B1C609600760C67 /* Socket_ClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Socket_ClientTests.m; sourceTree = "<group>"; };
+		0364C7391B1C60C600760C67 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		0364C73A1B1C60C600760C67 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		0364C73C1B1D57BB00760C67 /* BonjourUtilClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BonjourUtilClass.h; sourceTree = "<group>"; };
+		0364C73D1B1D57BB00760C67 /* BonjourUtilClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BonjourUtilClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 		0364C7061B1C609600760C67 = {
 			isa = PBXGroup;
 			children = (
+				0364C7381B1C60C600760C67 /* TCP */,
 				0364C7111B1C609600760C67 /* Socket-Client */,
 				0364C72B1B1C609600760C67 /* Socket-ClientTests */,
 				0364C7101B1C609600760C67 /* Products */,
@@ -89,6 +96,8 @@
 				0364C71F1B1C609600760C67 /* Images.xcassets */,
 				0364C7211B1C609600760C67 /* LaunchScreen.xib */,
 				0364C7121B1C609600760C67 /* Supporting Files */,
+				0364C73C1B1D57BB00760C67 /* BonjourUtilClass.h */,
+				0364C73D1B1D57BB00760C67 /* BonjourUtilClass.m */,
 			);
 			path = "Socket-Client";
 			sourceTree = "<group>";
@@ -117,6 +126,15 @@
 				0364C72D1B1C609600760C67 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0364C7381B1C60C600760C67 /* TCP */ = {
+			isa = PBXGroup;
+			children = (
+				0364C7391B1C60C600760C67 /* GCDAsyncSocket.h */,
+				0364C73A1B1C60C600760C67 /* GCDAsyncSocket.m */,
+			);
+			path = TCP;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +237,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0364C73B1B1C60C600760C67 /* GCDAsyncSocket.m in Sources */,
 				0364C71B1B1C609600760C67 /* ViewController.m in Sources */,
 				0364C7181B1C609600760C67 /* AppDelegate.m in Sources */,
+				0364C73E1B1D57BB00760C67 /* BonjourUtilClass.m in Sources */,
 				0364C7151B1C609600760C67 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +436,7 @@
 				0364C7341B1C609600760C67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0364C7351B1C609600760C67 /* Build configuration list for PBXNativeTarget "Socket-ClientTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +445,7 @@
 				0364C7371B1C609600760C67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
