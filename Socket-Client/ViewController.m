@@ -110,10 +110,7 @@
 //socket已完成写数据的请求后调用，如果有错误则不调用
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag
 {
-    
-    [asyncSocket readDataWithTimeout:-1 tag:109];
     NSLog(@"Write data done");
-    
 }
 
 //连接失败时和断开（手动和被动）时调用(如果连接成功貌似不会进此函数)  待调整
